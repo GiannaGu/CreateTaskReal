@@ -1,26 +1,33 @@
-#What should you wear depending on the weather? Prompt the user for what kind of weather they have 
-#maybe hot, cold, or warm, then once getting the answer give them an idea of they may want to wear. 
 
-#Start with a variable that can hold the input of the weather
-weather = input("What is the weather like in your area? a)Sunny b) Rainy c)Snowy d)Cloudy")
+temp = input("What is the weather in your area? Sunny, Rainy, Snowy, or Cloudy?")
 
-#Make lists and dictonaries that hold different clothing apperals
+if temp != "Sunny" or " Rainy" or "Snowy" or "Cloudy":
+    print("Invalid response, please type in again")
 
-clothing = {
 
-"Sunny":["Shorts", "Flip-Flops", "Tank Top", "Short-Sleeve Shirt","Sunglasses"],
 
-"Rainy":["Pants", "Closed Toe Shoes", "Rain-Jacket", "Umbrella","Long-Sleeve Shirt"],
+clothing = ["Sunny", "Rainy", "Snowy", "Cloudy"]
 
-"Snowy":["Thermals", "Boots", "Gloves", "OverCoat","Layers of Long Sleeves"],
+weathers = {
 
-"Cloudy":["Jeans", "Sweater", "Fluffy Socks", "Leggings","Hoodie"]
+"Sunny" : ["Shorts", "Flip-Flops", "Tank Top", "Short-Sleeve Shirt","Sunglasses"],
+
+"Rainy" : ["Pants", "Closed Toe Shoes", "Rain-Jacket", "Umbrella","Long-Sleeve Shirt"],
+
+"Snowy" : ["Thermals", "Boots", "Gloves", "OverCoat","Layers of Long Sleeves"],
+
+"Cloudy" : ["Jeans", "Sweater", "Fluffy Socks", "Leggings","Hoodie"]
 
 }
 
-#Make a Function that holds your input
-def choose_clothes(weather,clothing):
+def choose_clothes(temp):
 
-    if weather == "a":
+    for i in clothing:
         
+        if i == temp:
+            return i    
+        
+         
 
+outfit = weathers[(choose_clothes(temp))]
+print("Here are some clothes to wear for your type of weather!", outfit)
