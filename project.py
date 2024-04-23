@@ -1,33 +1,40 @@
 
-temp = input("What is the weather in your area? Sunny, Rainy, Snowy, or Cloudy?")
 
-if temp != "Sunny" or " Rainy" or "Snowy" or "Cloudy":
-    print("Invalid response, please type in again")
-
-
-
-clothing = ["Sunny", "Rainy", "Snowy", "Cloudy"]
 
 weathers = {
 
-"Sunny" : ["Shorts", "Flip-Flops", "Tank Top", "Short-Sleeve Shirt","Sunglasses"],
+"Sunny" : ["A tank top, shorts, sunglasses, and tennis shoes", "A Short-sleeve shirt, skirt, flip-flops, and a hat"],
 
-"Rainy" : ["Pants", "Closed Toe Shoes", "Rain-Jacket", "Umbrella","Long-Sleeve Shirt"],
+"Rainy" : ["Jeans, closed toe shoes, a rain-jacket and a long-sleeve shirt", "A hoodie, Coat, Umbrella, and Rain Boots"],
 
-"Snowy" : ["Thermals", "Boots", "Gloves", "OverCoat","Layers of Long Sleeves"],
+"Snowy" : ["Thermals,a sweater, gloves and an over-coat!", "Snow-pants,a puffer jacket, goggles, and a long sleeve shirt"],
 
-"Cloudy" : ["Jeans", "Sweater", "Fluffy Socks", "Leggings","Hoodie"]
+"Cloudy" : ["Jeans, a Sweater and fluffy socks", "Leggings, hoodies, and warm slippers"]
 
 }
 
-def choose_clothes(temp):
 
-    for i in clothing:
-        
-        if i == temp:
-            return i    
-        
-         
+def choose(weathers):
 
-outfit = weathers[(choose_clothes(temp))]
-print("Here are some clothes to wear for your type of weather!", outfit)
+    temp = input("What is the weather in your area? Sunny, Rainy, Snowy, or Cloudy?")
+
+    while temp not in weathers.keys():
+        temp = input("Input Invlaid, Please Pick: Sunny, Rainy, Snowy, or Cloudy?")
+    
+    print("Heres an outfit you can wear for ", temp , " weather!", weathers[temp][0])
+    like = input("Do you want to see another outfit that would fit the weather? Yes or No?" )
+    if like == "Yes":
+        print("Here is another outfit for ", temp, "weather!", weathers[temp][1])
+    else:
+        print("Glad you like your outfit! Thank You!")
+    
+
+start = input("Do you need outfit suggestions? Yes or No?")
+while start == "Yes":
+    choose(weathers)
+    end = input("Do you need to choose another Outfit for a a different weather? Yes or No?")
+    if end == "No":
+        break
+
+
+
