@@ -1,6 +1,3 @@
-
-
-
 weathers = {
 
 "Sunny" : ["A tank top, shorts, sunglasses, and tennis shoes", "A Short-sleeve shirt, skirt, flip-flops, and a hat"],
@@ -12,7 +9,6 @@ weathers = {
 "Cloudy" : ["Jeans, a Sweater and fluffy socks", "Leggings, hoodies, and warm slippers"]
 
 }
-
 
 def choose(weathers):
 
