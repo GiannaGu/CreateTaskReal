@@ -15,7 +15,7 @@ def choose(weathers):
     temp = input("What is the weather in your area? Sunny, Rainy, Snowy, or Cloudy?")
 
     while temp not in weathers.keys():
-        temp = input("Input Invlaid, Please Pick: Sunny, Rainy, Snowy, or Cloudy?")
+        temp = input("Input Invalid, Please Pick: Sunny, Rainy, Snowy, or Cloudy?")
     
     print("Heres an outfit you can wear for ", temp , " weather!", weathers[temp][0])
     like = input("Do you want to see another outfit that would fit the weather? Yes or No?" )
@@ -30,8 +30,10 @@ if start == "No":
     print("Thank You, if you need an outfit come back here!")
 while start == "Yes":
     choose(weathers)
-    end = input("Do you need to choose another Outfit for a a different weather? Yes or No?")
+    end = input("Do you need to choose another Outfit for a different weather? Yes or No?")
     if end == "No":
         print("Thank You! I hope you like your outfit!")
         break
+    
+       
     
