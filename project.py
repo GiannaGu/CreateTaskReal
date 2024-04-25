@@ -28,6 +28,7 @@ def choose(weathers):
 start = input("Do you need outfit suggestions? Yes or No?")
 if start == "No":
     print("Thank You, if you need an outfit come back here!")
+    
 while start == "Yes":
     choose(weathers)
     end = input("Do you need to choose another Outfit for a different weather? Yes or No?")
